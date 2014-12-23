@@ -27,12 +27,12 @@ class XmasTree(object):
         return [first, second]
 
     def _new_tree(self):
-        self.tree_list = (['*'] +
+        self.boughs = (['*'] +
                           sum([self._bough(n)
                                for n in range(1, (self.height - 1) // 2)], []) +
                           self._bough((self.height - 1) // 2, True) + ['| |'])
         self.tree = '\n'.join([s.center(self.center)
-                               for s in self.tree_list])
+                               for s in self.boughs])
 
     def show(self):
         print self.tree
