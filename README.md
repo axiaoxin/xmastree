@@ -17,8 +17,7 @@ or
 
 python：
 
-    In [1]: import xmastree
-    In [2]: xmastree.XmasTree().show()
+    In [1]: __import__('xmastree').XmasTree().show()
                                        *
                                       / \
                                       / \
