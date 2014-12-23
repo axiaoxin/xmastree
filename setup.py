@@ -8,7 +8,7 @@ except ImportError:
     from distutils.core import setup
 
 
-readme = open('readme.md').read()
+readme = open('README.rst').read()
 
 requirements = [
     # TODO: put package requirements here
@@ -47,7 +47,7 @@ setup(
     ],
     test_suite='tests',
     entry_points={
-        'console_scripts': ['xmastree = xmastree.XmasTree:show']
+        'console_scripts': ['xmastree = xmastree.xmastree:main']
     },
     tests_require=test_requirements
 )
