@@ -11,7 +11,7 @@ except ImportError:
 readme = open('README.md').read()
 
 requirements = [
-    # TODO: put package requirements here
+    'termcolor'
 ]
 
 test_requirements = [
@@ -20,7 +20,7 @@ test_requirements = [
 
 setup(
     name='xmastree',
-    version='0.0.1',
+    version='0.0.2',
     description='merry xmas',
     long_description=readme,
     author='axiaoxin',
