@@ -1,13 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from random import randint
-
+from termcolor import colored
 
 class XmasTree(object):
 
-    def __init__(self, height=20, center=80):
+    def __init__(self, height=20, center=80, greeting="Merry Xmas!"):
         self.height = height
         self.center = center
+        self.greeting = greeting
         self._new_tree()
 
     def _ornament(self):
@@ -35,7 +36,8 @@ class XmasTree(object):
                                for s in self.boughs])
 
     def show(self):
-        print self.tree
+        print colored(self.tree, 'green', attrs=['bold'])
+        print colored(self.greeting, 'red', attrs=['bold', 'blink', 'reverse', 'underline'])
 
 
 def main():
@@ -51,8 +53,13 @@ def main():
                         type=int,
                         default=80,
                         dest="center")
+    parser.add_argument("--greeting", '-G',
+                        help="greeting words",
+                        type=str,
+                        default='Merry Xmas!',
+                        dest="greeting")
     args = parser.parse_args()
-    tree = XmasTree(args.height, args.center)
+    tree = XmasTree(args.height, args.center, args.greeting)
     tree.show()
 
 if __name__ == '__main__':
