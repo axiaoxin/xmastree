@@ -7,8 +7,6 @@ try:
 except ImportError:
     from distutils.core import setup
 
-from xmastree import __version__
-
 readme = open('README.md').read()
 
 requirements = [
@@ -21,7 +19,7 @@ test_requirements = [
 
 setup(
     name='xmastree',
-    version=__version__,
+    version='0.0.5a',
     description='merry xmas',
     long_description=readme,
     author='axiaoxin',
