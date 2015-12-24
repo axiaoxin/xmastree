@@ -2,6 +2,8 @@
 xmastree
 ===============================
 
+![](screenshot.gif)
+
 
 merry xmas
 
